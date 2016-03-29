@@ -1,0 +1,5 @@
+---
+name: zookeeper
+
+files:
+- zookeeper/zookeeper-3.4.8.tar.gz

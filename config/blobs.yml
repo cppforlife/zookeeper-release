@@ -1,0 +1,8 @@
+java/jdk-1.7.0_51.tar.gz:
+  size: 138199690
+  object_id: 8a697fac-6cc4-443f-7009-b1c62e3d22b8
+  sha: bee3b085a90439c833ce18e138c9f1a615152891
+zookeeper/zookeeper-3.4.8.tar.gz:
+  size: 22261552
+  object_id: e2a7bdf4-47ae-4e67-668c-67c3679ffa29
+  sha: 51b61611a329294f75aed82f3a4517a4b6ff116f

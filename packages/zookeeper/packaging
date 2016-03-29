@@ -1,0 +1,5 @@
+set -e -u
+
+tar xzvf ${BOSH_COMPILE_TARGET}/zookeeper/zookeeper-3.4.8.tar.gz
+
+cp -a ${BOSH_COMPILE_TARGET}/zookeeper-3.4.8/* ${BOSH_INSTALL_TARGET}/

@@ -1,0 +1,54 @@
+#!/bin/bash
+
+set -e
+
+export ZOOCFGDIR=/var/vcap/jobs/zookeeper/config
+export ZOO_LOG_DIR=/var/vcap/sys/log/zookeeper
+export ZOO_LOG4J_PROP="INFO,CONSOLE,ROLLINGFILE"
+
+export LOG_DIR=/var/vcap/sys/log/zookeeper
+export RUN_DIR=/var/vcap/sys/run/zookeeper
+export PIDFILE=/var/vcap/sys/run/zookeeper/pid
+export TMPDIR=/var/vcap/data/zookeeper/tmp
+
+export JAVA_HOME=/var/vcap/packages/java/jdk
+export PATH=$JAVA_HOME/bin:$PATH
+
+export CLASSPATH=${CLASSPATH:-''}
+for jar_dir in $(ls -d /var/vcap/packages/*/*/*.jar); do
+  export CLASSPATH=${jar_dir}:$CLASSPATH
+done
+
+case $1 in
+
+  start)
+    mkdir -p $LOG_DIR $RUN_DIR
+    chown -R vcap:vcap $LOG_DIR $RUN_DIR
+
+    echo $$ > $PIDFILE
+
+    exec chpst -u <%= p('user') %>:<%= p('group') %> \
+      /var/vcap/packages/zookeeper/bin/zkServer.sh start-foreground \
+      >>/var/vcap/sys/log/zookeeper/stdout.log \
+      2>>/var/vcap/sys/log/zookeeper/stderr.log
+    ;;
+
+  stop)
+    if [ -f $PIDFILE ]; then
+      kill -9 `cat $PIDFILE` || true
+      rm -f $PIDFILE
+    fi
+    ;;
+
+  cli)
+    shift
+    exec /var/vcap/packages/zookeeper/bin/zkCli.sh $@
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop|cli}"
+    exit 1
+    ;;
+
+esac
+exit 0
