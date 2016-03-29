@@ -1,0 +1,24 @@
+name: zookeeper
+version: 0.0.1
+commit_hash: 13eb79b
+uncommitted_changes: false
+jobs:
+- name: zookeeper
+  version: 57efe078d0d82624907dc481846ebb54d75bd7a9
+  fingerprint: 57efe078d0d82624907dc481846ebb54d75bd7a9
+  sha1: 9f3e46c3bab87c720a34ae1dc6890cd26e5021b6
+packages:
+- name: java
+  version: c524e46e61b37894935ae28016973e0e8644fcde
+  fingerprint: c524e46e61b37894935ae28016973e0e8644fcde
+  sha1: a1f0001e124f33ad6c9258e6113a3e730c7e82b9
+  dependencies: []
+- name: zookeeper
+  version: ca455273c83e828eb50a21d21811684eceda2603
+  fingerprint: ca455273c83e828eb50a21d21811684eceda2603
+  sha1: d42e0023eb3d493e165ed0e36ae8643c8bfe535d
+  dependencies: []
+license:
+  version: a3e6d245553160dad1d273d363550134abc94578
+  fingerprint: a3e6d245553160dad1d273d363550134abc94578
+  sha1: 341989cdb5144f800873517429874ef1224116af
