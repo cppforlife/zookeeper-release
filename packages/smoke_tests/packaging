@@ -1,0 +1,19 @@
+set -e -x
+
+if [ -z "$BOSH_PACKAGES_DIR" ]; then
+	pkg_dir=$(readlink -nf /var/vcap/packages/golang_1.7)
+else
+	pkg_dir=$BOSH_PACKAGES_DIR/golang_1.7
+fi
+
+export GOROOT=$pkg_dir
+export GOPATH=$PWD
+export PATH=$GOROOT/bin:$PATH
+
+mkdir ../src && cp -a * ../src/ && mv ../src ./src
+
+mkdir -p $BOSH_INSTALL_TARGET/bin
+
+go build -o $BOSH_INSTALL_TARGET/bin/tests src/smoke_tests/*.go
+
+mv zk-smoketest $BOSH_INSTALL_TARGET/zk-smoketest

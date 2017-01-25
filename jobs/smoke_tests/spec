@@ -1,0 +1,16 @@
+---
+name: smoke_tests
+
+templates:
+  run: bin/run
+
+consumes:
+- name: conn
+  type: zookeeper
+  properties:
+  - client_port
+
+packages:
+- smoke_tests
+
+properties: {}

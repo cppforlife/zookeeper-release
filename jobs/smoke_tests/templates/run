@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -e
+
+<% conn = link('conn') %>
+export ZOOKEEPER_SERVERS=<%= conn.instances.map { |i| "#{i.address}:#{conn.p('client_port')}" }.join(",") %>
+
+echo "-----> simple test"
+/var/vcap/packages/smoke_tests/bin/tests
+
+(
+  set -e
+  cd /var/vcap/packages/smoke_tests/zk-smoketest/
+  export PYTHONPATH=lib.linux-x86_64-2.6
+  export LD_LIBRARY_PATH=lib.linux-x86_64-2.6
+  echo "-----> phunt/zk-smoketests"
+  ./zk-smoketest.py --servers "$ZOOKEEPER_SERVERS"
+)
+
+(
+  set -e
+  cd /var/vcap/packages/smoke_tests/zk-smoketest/
+  export PYTHONPATH=lib.linux-x86_64-2.6
+  export LD_LIBRARY_PATH=lib.linux-x86_64-2.6
+  echo "-----> phunt/zk-latencies (servers)"
+  ./zk-latencies.py --servers "$ZOOKEEPER_SERVERS" \
+    --znode_count=100 \
+    --znode_size=100 \
+    --synchronous
+)
+
+(
+  set -e
+  cd /var/vcap/packages/smoke_tests/zk-smoketest/
+  export PYTHONPATH=lib.linux-x86_64-2.6
+  export LD_LIBRARY_PATH=lib.linux-x86_64-2.6
+  echo "-----> phunt/zk-latencies (cluster)"
+  ./zk-latencies.py --cluster "$ZOOKEEPER_SERVERS" \
+    --znode_count=100 \
+    --znode_size=100 \
+    --synchronous
+)
