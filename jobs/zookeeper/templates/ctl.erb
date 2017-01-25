@@ -40,13 +40,17 @@ case $1 in
     fi
     ;;
 
+  status)
+    exec /var/vcap/packages/zookeeper/bin/zkServer.sh status
+    ;;
+
   cli)
     shift
     exec /var/vcap/packages/zookeeper/bin/zkCli.sh $@
     ;;
 
   *)
-    echo "Usage: $0 {start|stop|cli}"
+    echo "Usage: $0 {start|stop|status|cli}"
     exit 1
     ;;
 
