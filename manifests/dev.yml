@@ -1,0 +1,7 @@
+- type: replace
+  path: /releases/name=zookeeper/url
+  value: file://.
+
+- type: replace
+  path: /releases/name=zookeeper/version
+  value: create
