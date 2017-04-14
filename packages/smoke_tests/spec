@@ -2,7 +2,7 @@
 name: smoke_tests
 
 dependencies:
-- golang_1.7
+- golang1.7
 
 files:
 - "**/*.go"
