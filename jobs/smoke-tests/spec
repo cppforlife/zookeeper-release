@@ -1,5 +1,5 @@
 ---
-name: smoke_tests
+name: smoke-tests
 
 templates:
   run: bin/run
