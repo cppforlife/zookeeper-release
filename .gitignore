@@ -15,3 +15,6 @@ releases/**/*.tgz
 *#
 #*
 pkg/
+
+tests/creds.yml
+tests/state.json

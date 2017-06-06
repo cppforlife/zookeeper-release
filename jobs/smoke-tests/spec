@@ -1,5 +1,5 @@
 ---
-name: smoke_tests
+name: smoke-tests
 
 templates:
   run: bin/run
@@ -11,6 +11,6 @@ consumes:
   - client_port
 
 packages:
-- smoke_tests
+- smoke-tests
 
 properties: {}
