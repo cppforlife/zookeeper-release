@@ -3,9 +3,9 @@ name: zookeeper
 
 releases:
 - name: zookeeper
-  version: 0.0.3
-  url: https://bosh.io/d/github.com/cppforlife/zookeeper-release?v=0.0.3
-  sha1: ae79ed352a4e0bdf398d188d6944fbb782668c7e
+  version: 0.0.4
+  url: https://bosh.io/d/github.com/cppforlife/zookeeper-release?v=0.0.4
+  sha1: 89e55eaa64e9ca6fea6f0a28826142758a440766
 
 stemcells:
 - alias: default
