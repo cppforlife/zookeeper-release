@@ -27,7 +27,7 @@ echo "-----> `date`: Report any problems"
 bosh -n -d zookeeper cck --report
 
 echo "-----> `date`: Delete random VM"
-bosh -n -d zookeeper delete-vm `bosh -d zookeeper vms|sort|cut -f5|head -1`
+bosh -n -d zookeeper delete-vm `bosh -d zookeeper vms --column vm_cid|sort|head -1`
 
 echo "-----> `date`: Fix deleted VM"
 bosh -n -d zookeeper cck --auto
