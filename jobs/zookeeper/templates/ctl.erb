@@ -27,7 +27,7 @@ case $1 in
 
     echo $$ > $PIDFILE
 
-    exec chpst -u <%= p('user') %>:<%= p('group') %> \
+    exec chpst -u vcap:vcap \
       /var/vcap/packages/zookeeper/bin/zkServer.sh start-foreground \
       >>/var/vcap/sys/log/zookeeper/stdout.log \
       2>>/var/vcap/sys/log/zookeeper/stderr.log

@@ -43,13 +43,6 @@ properties:
     description: "Apache Zookeeper Client leader election port"
     default: 3888
 
-  user:
-    description: "User which will own the Apache ZooKeeper services"
-    default: "zookeeper"
-  group:
-    description: "Group which will own the Apache ZooKeeper services"
-    default: "vcap"
-
   autopurge_purge_interval:
     description: "The time interval in hours for which the purge task has to be triggered"
     default: 24

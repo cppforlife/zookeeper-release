@@ -1,10 +1,5 @@
 #!/bin/bash
 
-group_name=<%= p('group') %>
-user_name=<%= p('user') %>
-getent group $group_name || groupadd $group_name
-id $user_name &>/dev/null || useradd -s /sbin/nologin -r -M $user_name -G $group_name
-
 export LOG_DIR=/var/vcap/sys/log/zookeeper
 export RUN_DIR=/var/vcap/sys/run/zookeeper
 export STORE_DIR=/var/vcap/store/zookeeper
@@ -19,4 +14,4 @@ done
 
 cp /var/vcap/jobs/zookeeper/config/myid ${STORE_DIR}/
 
-chown -R ${group_user}:${group_name} ${STORE_DIR}
+chown -R vcap:vcap ${STORE_DIR}
