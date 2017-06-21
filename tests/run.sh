@@ -35,7 +35,4 @@ bosh -n -d zookeeper cck --auto
 echo "-----> `date`: Delete deployment"
 bosh -n -d zookeeper delete-deployment
 
-echo "-----> `date`: Clean up disks, etc."
-bosh -n -d zookeeper clean-up --all
-
 echo "-----> `date`: Done"
