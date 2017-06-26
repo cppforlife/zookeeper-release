@@ -24,6 +24,7 @@ instance_groups:
   instances: 5
   jobs:
   - name: zookeeper
+    release: zookeeper
     properties: {}
   vm_type: default
   stemcell: default
@@ -37,6 +38,7 @@ instance_groups:
   instances: 1
   jobs:
   - name: smoke-tests
+    release: zookeeper
     properties: {}
   vm_type: default
   stemcell: default
