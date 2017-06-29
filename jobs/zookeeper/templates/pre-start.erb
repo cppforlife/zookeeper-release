@@ -9,7 +9,7 @@ export TMP_DIR=/var/vcap/data/zookeeper/tmp
 for dir in $LOG_DIR $RUN_DIR $DATA_DIR $STORE_DIR $TMP_DIR; do
   mkdir -p ${dir}
   chown vcap:vcap ${dir}
-  chmod 775 ${dir}
+  chmod 700 ${dir}
 done
 
 cp /var/vcap/jobs/zookeeper/config/myid ${STORE_DIR}/
