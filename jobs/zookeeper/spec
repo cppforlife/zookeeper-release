@@ -91,3 +91,6 @@ properties:
   tick_time:
     description: "The length of a single tick, which is the basic time unit used by ZooKeeper, as measured in milliseconds"
     default: 2000
+  force_sync:
+    description: "Requires updates to be synced to media of the transaction log before finishing processing the update. Setting to 'no' improves performance dramatically at the cost of losing recent commits if all nodes crash at the same time"
+    default: "yes"
