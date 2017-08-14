@@ -2,4 +2,4 @@
 name: zookeeper
 
 files:
-- zookeeper/zookeeper-3.4.8.tar.gz
+- zookeeper/zookeeper-3.4.10.tar.gz
