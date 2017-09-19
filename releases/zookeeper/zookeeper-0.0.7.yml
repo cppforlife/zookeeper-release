@@ -1,0 +1,43 @@
+name: zookeeper
+version: 0.0.7
+commit_hash: e7ead22
+uncommitted_changes: false
+jobs:
+- name: smoke-tests
+  version: 840b14bc609483bb03cf87a938bc69e76a6e2d88
+  fingerprint: 840b14bc609483bb03cf87a938bc69e76a6e2d88
+  sha1: abafa9fc0c4d35fc818cc55438cbf19bd029a418
+- name: status
+  version: 1a6e60e211521487e4d03c8f7dc652b27a9ee368
+  fingerprint: 1a6e60e211521487e4d03c8f7dc652b27a9ee368
+  sha1: bbbdb21b04ce9d8cb3a5b4b89ad93a0703e9c09e
+- name: zookeeper
+  version: 17fe24515b0740d72b3ecdfe002bfaa6ae1771ca
+  fingerprint: 17fe24515b0740d72b3ecdfe002bfaa6ae1771ca
+  sha1: f04a3f50ab147f129817dcea22a2c9cd3f338d96
+packages:
+- name: golang-1.8-linux
+  version: 3eac55db0483de642b1be389966327e931db3e3f
+  fingerprint: 3eac55db0483de642b1be389966327e931db3e3f
+  sha1: 406d519ff8732a21b1591a768834c8c94bc01e76
+  dependencies: []
+- name: java
+  version: c524e46e61b37894935ae28016973e0e8644fcde
+  fingerprint: c524e46e61b37894935ae28016973e0e8644fcde
+  sha1: a1f0001e124f33ad6c9258e6113a3e730c7e82b9
+  dependencies: []
+- name: smoke-tests
+  version: ec91e258c41471227a759c2749e7295cb65eff5a
+  fingerprint: ec91e258c41471227a759c2749e7295cb65eff5a
+  sha1: 13f5f1485eaf11362489f2444627f5624a5d7729
+  dependencies:
+  - golang-1.8-linux
+- name: zookeeper
+  version: 43ee655b89f8a05cc472ca997e8c8186457241c1
+  fingerprint: 43ee655b89f8a05cc472ca997e8c8186457241c1
+  sha1: 5fe92e72380a1b6f3353817edf6b41d2dd128931
+  dependencies: []
+license:
+  version: e79e93c49714f52c0a231c78d480ea1ca757c8f9
+  fingerprint: e79e93c49714f52c0a231c78d480ea1ca757c8f9
+  sha1: 09d28a6f4fc5b6725733add015e79928f7546a32
