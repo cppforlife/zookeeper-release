@@ -1,0 +1,11 @@
+---
+name: status
+
+description: Prints Zookeeper node status information. Expected to be colocated with zookeeper job.
+
+templates:
+  run: bin/run
+
+packages: []
+
+properties: {}

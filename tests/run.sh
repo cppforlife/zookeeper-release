@@ -17,11 +17,14 @@ echo "-----> `date`: Deploy"
 echo "-----> `date`: Recreate all VMs"
 bosh -n -d zookeeper recreate
 
-echo "-----> `date`: Exercise deployment"
+echo "-----> `date`: Exercise deployment via smoke-tests"
 bosh -n -d zookeeper run-errand smoke-tests
 
 echo "-----> `date`: Restart deployment"
 bosh -n -d zookeeper restart
+
+echo "-----> `date`: Check on status"
+bosh -n -d zookeeper run-errand status
 
 echo "-----> `date`: Report any problems"
 bosh -n -d zookeeper cck --report

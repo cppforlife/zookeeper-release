@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec /var/vcap/jobs/zookeeper/bin/ctl status
