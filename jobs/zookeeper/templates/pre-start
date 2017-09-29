@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+store_dir=/var/vcap/store/zookeeper
+mkdir -p $store_dir
+chmod 700 $store_dir
+cp /var/vcap/jobs/zookeeper/config/myid ${store_dir}/
+chown -R vcap:vcap $store_dir

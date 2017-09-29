@@ -5,6 +5,9 @@ releases:
 - name: zookeeper
   version: 0.0.7
   url: git+https://github.com/cppforlife/zookeeper-release
+- name: bpm
+  version: 0.1.0
+  url: git+https://github.com/cloudfoundry-incubator/bpm-release
 
 stemcells:
 - alias: default
@@ -22,6 +25,8 @@ instance_groups:
   azs: [z1, z2, z3]
   instances: 5
   jobs:
+  - name: bpm
+    release: bpm
   - name: zookeeper
     release: zookeeper
     properties: {}

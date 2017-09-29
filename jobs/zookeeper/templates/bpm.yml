@@ -1,0 +1,5 @@
+processes:
+  zookeeper:
+    executable: /var/vcap/jobs/zookeeper/bin/ctl
+    args:
+    - start

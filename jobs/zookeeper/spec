@@ -22,8 +22,9 @@ provides:
   - leader_election_port
 
 templates:
-  ctl.erb: bin/ctl
-  pre-start.erb: bin/pre-start
+  bpm.yml: config/bpm.yml
+  ctl: bin/ctl
+  pre-start: bin/pre-start
   configuration.xsl: config/configuration.xsl
   log4j.properties: config/log4j.properties
   myid.erb: config/myid
