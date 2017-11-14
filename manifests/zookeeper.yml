@@ -6,7 +6,7 @@ releases:
   version: 0.0.7
   url: git+https://github.com/cppforlife/zookeeper-release
 - name: bpm
-  version: 0.1.0
+  version: 0.2.0
   url: git+https://github.com/cloudfoundry-incubator/bpm-release
 
 stemcells:
