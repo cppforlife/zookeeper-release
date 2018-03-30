@@ -1,0 +1,4 @@
+# temporary location for compiled releases
+- name: zookeeper-0.0.8-ubuntu-trusty-3541.10-20180329-223312-771504949.tgz
+  url: https://s3.amazonaws.com/zookeeper-blobs/f7b922c9-87b0-4baa-5b6e-4ce8bbe4eb2f
+  sha1: 165aa05ee7b018dc90d8aa0aa2a02a6ae30e75e3
