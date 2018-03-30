@@ -24,6 +24,8 @@ instance_groups:
   jobs:
   - name: zookeeper
     release: zookeeper
+    provides:
+      conn: {shared: true}
     properties: {}
   - name: status
     release: zookeeper
