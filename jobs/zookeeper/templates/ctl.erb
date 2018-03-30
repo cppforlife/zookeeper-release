@@ -2,6 +2,8 @@
 
 set -e
 
+source /var/vcap/packages/openjdk-8/bosh/runtime.env
+
 export ZOOCFGDIR=/var/vcap/jobs/zookeeper/config
 export ZOO_LOG_DIR=/var/vcap/sys/log/zookeeper
 export ZOO_LOG4J_PROP="INFO,CONSOLE,ROLLINGFILE"
@@ -10,14 +12,6 @@ export LOG_DIR=/var/vcap/sys/log/zookeeper
 export RUN_DIR=/var/vcap/sys/run/zookeeper
 export PIDFILE=/var/vcap/sys/run/zookeeper/pid
 export TMPDIR=/var/vcap/data/zookeeper/tmp
-
-export JAVA_HOME=/var/vcap/packages/java/jdk
-export PATH=$JAVA_HOME/bin:$PATH
-
-export CLASSPATH=${CLASSPATH:-''}
-for jar_dir in $(ls -d /var/vcap/packages/*/*/*.jar); do
-  export CLASSPATH=${jar_dir}:$CLASSPATH
-done
 
 case $1 in
 
