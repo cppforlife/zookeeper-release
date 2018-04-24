@@ -1,7 +1,7 @@
 <% peers = link('peers') %>
 
 <% peers.instances.each do |instance| %>
-server.<%= instance.index+1 %>=<%= instance.address %>:<%= peers.p('quorum_port') %>:<%= peers.p('leader_election_port') %>
+server.<%= instance.index+1 %>=<%= (instance.id == spec.id) ? "0.0.0.0" : instance.address %>:<%= peers.p('quorum_port') %>:<%= peers.p('leader_election_port') %>
 <% end %>
 
 autopurge.purgeInterval=<%= p('autopurge_purge_interval') %>
