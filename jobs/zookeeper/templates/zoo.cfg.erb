@@ -10,7 +10,7 @@ clientPort=<%= peers.p('client_port') %>
 clientPortAddress=<%= p('listen_address') %>
 cnxTimeout=<%= p('cnx_timeout') %>
 dataDir=/var/vcap/store/zookeeper
-dataLogDir=/var/vcap/sys/log/zookeeper
+dataLogDir=<%= p('trans_log_dir') %>
 electionAlg=<%= p('election_algorim') %>
 fsync.warningthresholdms=<%= p('warning_threshold_ms') %>
 globalOutstandingLimit=<%= p('global_outstanding_limit') %>
