@@ -3,7 +3,7 @@ name: zookeeper
 
 releases:
 - name: zookeeper
-  version: 0.0.9
+  version: 0.0.10
   url: git+https://github.com/cppforlife/zookeeper-release
 
 stemcells:

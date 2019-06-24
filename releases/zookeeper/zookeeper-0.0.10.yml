@@ -1,0 +1,55 @@
+name: zookeeper
+version: 0.0.10
+commit_hash: c4eccf2
+uncommitted_changes: false
+jobs:
+- name: smoke-tests
+  version: 0a1e9f96158dddeb098526b1205a171f397c3b92e19459e530b31d65a3e484b8
+  fingerprint: 0a1e9f96158dddeb098526b1205a171f397c3b92e19459e530b31d65a3e484b8
+  sha1: sha256:b3899480eb7f22b8a7961a8067460104b8e5b867a4732e3483f7bb90787bc639
+  packages:
+  - smoke-tests
+  - python-2.7
+- name: status
+  version: 299009e28f2b9a858f54245a14f670c5207afcbcd2fa672441214f73cc8d3998
+  fingerprint: 299009e28f2b9a858f54245a14f670c5207afcbcd2fa672441214f73cc8d3998
+  sha1: sha256:6b8f6fe7fa57ec717f8e930ee2064b61704545adda3fb66dcc357127a94eb555
+  packages: []
+- name: zookeeper
+  version: 45e499491c8bb298000db970425361f9fdf034dc16f176546a61bd4a7534e5ac
+  fingerprint: 45e499491c8bb298000db970425361f9fdf034dc16f176546a61bd4a7534e5ac
+  sha1: sha256:6c96e07e2b389b08ce69f859b82f4c62432a398c9112819a186ea0eb6de56da6
+  packages:
+  - openjdk-8
+  - zookeeper
+packages:
+- name: golang-1.10-linux
+  version: 48c842421b6f05acf88dc6ec17f7574dade28a86
+  fingerprint: 48c842421b6f05acf88dc6ec17f7574dade28a86
+  sha1: e9a18aebf2c407ce17423c22c913b6612cf4b75f
+  dependencies: []
+- name: openjdk-8
+  version: 5e72bbc5151b0248ff5925636fdd7d328f7dea20
+  fingerprint: 5e72bbc5151b0248ff5925636fdd7d328f7dea20
+  sha1: af22f95eede2918259e6337a0a1be86cfeb6a32a
+  dependencies: []
+- name: python-2.7
+  version: 7063c9f4e43bf49374c2f6cc6c2f74a5467f2298
+  fingerprint: 7063c9f4e43bf49374c2f6cc6c2f74a5467f2298
+  sha1: bd130315766a7641dbd20aa328d16f084cc17965
+  dependencies: []
+- name: smoke-tests
+  version: dd70a2d1692bd94aeccc257b5668549d2eb29d66ff21abd420257ac1df42ff0f
+  fingerprint: dd70a2d1692bd94aeccc257b5668549d2eb29d66ff21abd420257ac1df42ff0f
+  sha1: sha256:79137849d8e1b7d3f79988afed8870445e821fd5dc091c0389dd34d623aa3f6a
+  dependencies:
+  - golang-1.10-linux
+- name: zookeeper
+  version: c98c52595749d4a264d28ebaf39c805fa27fbf148c3086c37cfc59aeca5799a9
+  fingerprint: c98c52595749d4a264d28ebaf39c805fa27fbf148c3086c37cfc59aeca5799a9
+  sha1: sha256:8681eb23f532181cfeb198e66052a3852bc4fdd8cda71011dc3d6d70cd8f249e
+  dependencies: []
+license:
+  version: 9c24b117919803cc53bca45643e8ab7cb238820ab189a674ab5135172a6e6f6e
+  fingerprint: 9c24b117919803cc53bca45643e8ab7cb238820ab189a674ab5135172a6e6f6e
+  sha1: sha256:da0a9986110fda3e163c550ae3cee342c0d19da87e7d0ef9f388e8c4bf3301db
