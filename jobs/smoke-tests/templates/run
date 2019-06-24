@@ -2,6 +2,8 @@
 
 set -e
 
+export PATH="/var/vcap/packages/python-2.7/bin:$PATH"
+
 <% conn = link('conn') %>
 export ZOOKEEPER_SERVERS=<%= conn.instances.map { |i| "#{i.address}:#{conn.p('client_port')}" }.join(",") %>
 

@@ -12,5 +12,6 @@ consumes:
 
 packages:
 - smoke-tests
+- python-2.7
 
 properties: {}
