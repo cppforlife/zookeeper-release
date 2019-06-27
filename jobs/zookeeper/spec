@@ -52,6 +52,9 @@ properties:
   cnx_timeout:
     description: "Sets the timeout value for opening connections for leader election notifications"
     default: 5
+  trans_log_dir:
+    description: "The location of transaction log. If not set, transaction log will be stored under /var/vcap/sys/log/zookeeper"
+    default: "/var/vcap/sys/log/zookeeper"
   election_algorim:
     description: "Election implementation to use"
     default: 3
