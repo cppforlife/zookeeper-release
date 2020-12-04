@@ -12,6 +12,8 @@ export LOG_DIR=/var/vcap/sys/log/zookeeper
 export RUN_DIR=/var/vcap/sys/run/zookeeper
 export PIDFILE=/var/vcap/sys/run/zookeeper/pid
 export TMPDIR=/var/vcap/data/zookeeper/tmp
+mem="$(free -m | grep -E "^Mem:" | awk '{print $2/2}')m"
+export SERVER_JVMFLAGS="-Xms2048m -Xmx${mem}"
 
 case $1 in
 
