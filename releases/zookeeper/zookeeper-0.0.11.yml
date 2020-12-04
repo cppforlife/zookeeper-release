@@ -1,0 +1,55 @@
+name: zookeeper
+version: 0.0.11
+commit_hash: 9127da0
+uncommitted_changes: true
+jobs:
+- name: smoke-tests
+  version: 0a1e9f96158dddeb098526b1205a171f397c3b92e19459e530b31d65a3e484b8
+  fingerprint: 0a1e9f96158dddeb098526b1205a171f397c3b92e19459e530b31d65a3e484b8
+  sha1: sha256:5144d3030081cd398390bb9776c4f0cc51f5ff4194bf4522987c5096b5037fa8
+  packages:
+  - smoke-tests
+  - python-2.7
+- name: status
+  version: 299009e28f2b9a858f54245a14f670c5207afcbcd2fa672441214f73cc8d3998
+  fingerprint: 299009e28f2b9a858f54245a14f670c5207afcbcd2fa672441214f73cc8d3998
+  sha1: sha256:dc17347fac24f9419a251f469215058739dc12214e4168bc1c08ae026b60139f
+  packages: []
+- name: zookeeper
+  version: bea9c167eb44e129c78184888b128fcac7dc41c12e9a7e51729882b029798baf
+  fingerprint: bea9c167eb44e129c78184888b128fcac7dc41c12e9a7e51729882b029798baf
+  sha1: sha256:e22761cd7d2128ea87f1aacd24bd46dfadd36c4696c9189a6e1f562de6e45df6
+  packages:
+  - openjdk-8
+  - zookeeper
+packages:
+- name: golang-1.15-linux
+  version: ac9a03fba5f0f8ce483f674b73c765d5fffd5e03ade9f94a78b45d6bb8aa52b2
+  fingerprint: ac9a03fba5f0f8ce483f674b73c765d5fffd5e03ade9f94a78b45d6bb8aa52b2
+  sha1: sha256:6faa67fb9ea70812a1137438b2a1e5f5243ad77d7577f6e4b3cbb2ae7b3078a7
+  dependencies: []
+- name: openjdk-8
+  version: 8b4d1b1fbd6c326e1cf3e6cbdf1564f21dd2be5819c2e85a702569874c893efe
+  fingerprint: 8b4d1b1fbd6c326e1cf3e6cbdf1564f21dd2be5819c2e85a702569874c893efe
+  sha1: sha256:441cd27d28b7a45b0f15b2a0002a75789db84a5e5dc33984babf23fe215c639a
+  dependencies: []
+- name: python-2.7
+  version: 7063c9f4e43bf49374c2f6cc6c2f74a5467f2298
+  fingerprint: 7063c9f4e43bf49374c2f6cc6c2f74a5467f2298
+  sha1: bd130315766a7641dbd20aa328d16f084cc17965
+  dependencies: []
+- name: smoke-tests
+  version: 5d88adf4d90fbdd13cfe98022142b9ec166ac7a48928fa8e72f9c6d3ba4bc37b
+  fingerprint: 5d88adf4d90fbdd13cfe98022142b9ec166ac7a48928fa8e72f9c6d3ba4bc37b
+  sha1: sha256:af52bd7d64126288c96bc563763d81a39e92988a94b1fe06073bdc40c61aaae9
+  dependencies:
+  - golang-1.15-linux
+- name: zookeeper
+  version: c98c52595749d4a264d28ebaf39c805fa27fbf148c3086c37cfc59aeca5799a9
+  fingerprint: c98c52595749d4a264d28ebaf39c805fa27fbf148c3086c37cfc59aeca5799a9
+  sha1: sha256:ae4016ee3e464b565202d3024e139d109371ef4b50333804a693a995e52e079c
+  dependencies: []
+license:
+  version: 9c24b117919803cc53bca45643e8ab7cb238820ab189a674ab5135172a6e6f6e
+  fingerprint: 9c24b117919803cc53bca45643e8ab7cb238820ab189a674ab5135172a6e6f6e
+  sha1: sha256:1e00049c349592628c54d61004923dd533a590c29872904c6e7922cb532ceb64
