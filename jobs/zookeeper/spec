@@ -2,7 +2,7 @@
 name: zookeeper
 
 packages:
-- openjdk-8
+- openjdk-11
 - zookeeper
 
 consumes:

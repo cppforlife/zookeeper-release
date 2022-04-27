@@ -1,0 +1,55 @@
+name: zookeeper
+version: 0.0.12
+commit_hash: c866a80
+uncommitted_changes: true
+jobs:
+- name: smoke-tests
+  version: 0a1e9f96158dddeb098526b1205a171f397c3b92e19459e530b31d65a3e484b8
+  fingerprint: 0a1e9f96158dddeb098526b1205a171f397c3b92e19459e530b31d65a3e484b8
+  sha1: sha256:cf3ea0d780f4f7beff57bc33444b80147234f860fdd3414e87f06a3f4f56a202
+  packages:
+  - smoke-tests
+  - python-2.7
+- name: status
+  version: 299009e28f2b9a858f54245a14f670c5207afcbcd2fa672441214f73cc8d3998
+  fingerprint: 299009e28f2b9a858f54245a14f670c5207afcbcd2fa672441214f73cc8d3998
+  sha1: sha256:6064ab4b89db05c72514272d7933875d7365bf01133fa5dac76a1820c99df218
+  packages: []
+- name: zookeeper
+  version: 21aa18f0088ddb8083f71646458e872a8c09190bf28b99696af4d5beb4f67b05
+  fingerprint: 21aa18f0088ddb8083f71646458e872a8c09190bf28b99696af4d5beb4f67b05
+  sha1: sha256:c005a437e266b08c99aca177a8156e76c41e61ff247ee4138d49df1bec126d59
+  packages:
+  - openjdk-11
+  - zookeeper
+packages:
+- name: golang-1.17-linux
+  version: 355e0f4a536222d97a513bf5ca619f4abd4b755f4d3b9a5f788c84995414da7c
+  fingerprint: 355e0f4a536222d97a513bf5ca619f4abd4b755f4d3b9a5f788c84995414da7c
+  sha1: sha256:e2c51376b7330ae5cf637d497e21bdde6f833a7b800e028d5b333d3852a51bdc
+  dependencies: []
+- name: openjdk-11
+  version: c4b2f53750b5543e926aa1c7ff9796760ee5950fafa2b644417cbe48986aef6a
+  fingerprint: c4b2f53750b5543e926aa1c7ff9796760ee5950fafa2b644417cbe48986aef6a
+  sha1: sha256:cd1a2b409c2a8a27b45b13c2f05384ce43878e21a0740bbc92cdf8b29e263093
+  dependencies: []
+- name: python-2.7
+  version: 7063c9f4e43bf49374c2f6cc6c2f74a5467f2298
+  fingerprint: 7063c9f4e43bf49374c2f6cc6c2f74a5467f2298
+  sha1: bd130315766a7641dbd20aa328d16f084cc17965
+  dependencies: []
+- name: smoke-tests
+  version: 7b02d90c30ac88a301565941eff50cffd20e533f61931fbe5e379bff1cf9e44c
+  fingerprint: 7b02d90c30ac88a301565941eff50cffd20e533f61931fbe5e379bff1cf9e44c
+  sha1: sha256:abf426d9ed5e20530ed4dabad5dd4c45b9108cc68b284ca52184eb84ae4bcc5f
+  dependencies:
+  - golang-1.17-linux
+- name: zookeeper
+  version: c98c52595749d4a264d28ebaf39c805fa27fbf148c3086c37cfc59aeca5799a9
+  fingerprint: c98c52595749d4a264d28ebaf39c805fa27fbf148c3086c37cfc59aeca5799a9
+  sha1: sha256:11f9cf6a851a111ba2cf1758b52fca993fcfd912ade1ab3eb81ababde2334fe4
+  dependencies: []
+license:
+  version: 9c24b117919803cc53bca45643e8ab7cb238820ab189a674ab5135172a6e6f6e
+  fingerprint: 9c24b117919803cc53bca45643e8ab7cb238820ab189a674ab5135172a6e6f6e
+  sha1: sha256:33a6b9d0a5aa22aed7b125367277387129bd286fea0ea4cd0cb3ec87cd7820b3
