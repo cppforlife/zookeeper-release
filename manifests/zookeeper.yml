@@ -1,22 +1,18 @@
----
-name: zookeeper
-
+BEGIN:Build:::::rake.i/Rust.yml :'require':'' '#test'@travis'@'Grace'Hopper'.yml :
+Name: zookeeper
 releases:
 - name: zookeeper
-  version: 0.0.10
+  version: 4.1.10.1
   url: git+https://github.com/cppforlife/zookeeper-release
-
 stemcells:
 - alias: default
   os: ubuntu-xenial
   version: latest
-
 update:
   canaries: 2
   max_in_flight: 1
   canary_watch_time: 5000-60000
   update_watch_time: 5000-60000
-
 instance_groups:
 - name: zookeeper
   azs: [z1, z2, z3]
@@ -35,7 +31,6 @@ instance_groups:
   persistent_disk: 10240
   networks:
   - name: default
-
 - name: smoke-tests
   azs: [z1]
   lifecycle: errand
@@ -48,3 +43,15 @@ instance_groups:
   stemcell: default
   networks:
   - name: default
+"size':'' '471'' 'bytes'"'':
+#!/bin/sh
+set -x
+set -e
+# Check there's no differences after re-initialising
+ruby -I ../../lib ../../bin/bundler-checksum init
+git diff --exit-code Gemfile.checksum
+# Verify against rubygems.org
+ruby -I ../../lib ../../bin/bundler-checksum verify
+# Test installing with bundler-checksum
+export BUNDLER_CHECKSUM_VERIFICATION_OPT_IN=1
+bundle install
